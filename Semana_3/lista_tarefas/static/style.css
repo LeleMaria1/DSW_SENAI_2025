@@ -1,0 +1,83 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f6fa;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 1.5rem;
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    min-width: 350px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3436;
+    margin: 0;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #636e72;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+.button {
+    display: block;
+    margin: 0 auto;
+    padding: 0.6rem 2rem;
+    background: #0984e3;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: #74b9ff;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.table th,
+.table td {
+    border: 1px solid #dfe6e9;
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.table th {
+    background: #dfe6e9;
+    color: #2d3436;
+}
