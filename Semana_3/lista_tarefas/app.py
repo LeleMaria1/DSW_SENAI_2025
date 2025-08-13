@@ -6,7 +6,7 @@ app = Flask(__name__)
 #Rota para o endereço /index
 @app.route('/index')
 def exibir_index():
-    return render_template('index.html')
+    return render_template('/index.html')
 
 
 #Rota para o endereço /sucesso
