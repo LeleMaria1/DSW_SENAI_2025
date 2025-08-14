@@ -14,7 +14,8 @@
 </head>
 <body>
 <div class="container">
-    <form action="#" method="post">
+    <form method="post">
+        <h1>Lista de Tarefas</h1>
         <label for="tarefa">Tarefa:</label>
         <input type="text" id="tarefa" name="tarefa" required>
         <br>
@@ -23,9 +24,7 @@
         <br>
         <button type="submit">Adicionar</button>
     </form>
-</div>
-<div class="container">
-    <h2>Lista de Tarefas</h2>
+    <div>
     <table>
         <thead>
             <tr>
@@ -42,6 +41,7 @@
             {% endfor %}
         </tbody>
     </table>
+    </div>
 </div>
 </body>
 </html>

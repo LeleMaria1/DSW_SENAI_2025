@@ -1,83 +1,94 @@
+
+
 body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f5f6fa;
-    margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #E6E6FA;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 .container {
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    gap: 1.5rem;
-    background: #fff;
-    padding: 2.5rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    min-width: 350px;
-    max-width: 400px;
-    width: 100%;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
-.title {
+h1, h2 {
+    color: #800080; 
     text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2d3436;
-    margin: 0;
 }
 
-.label {
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+label {
     display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    color: #636e72;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.input {
+input[type="text"],
+input[type="date"] {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #dfe6e9;
-    border-radius: 6px;
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     box-sizing: border-box;
 }
 
-.button {
-    display: block;
-    margin: 0 auto;
-    padding: 0.6rem 2rem;
-    background: #0984e3;
-    color: #fff;
+button {
+    background-color: #800080;
+    color: white;
+    padding: 12px 40px; 
     border: none;
-    border-radius: 6px;
-    font-size: 1rem;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background 0.2s;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
 }
 
-.button:hover {
-    background: #74b9ff;
+button:hover {
+    background-color: #6a006a; 
 }
 
-.table {
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
+    margin-top: 20px;
 }
 
-.table th,
-.table td {
-    border: 1px solid #dfe6e9;
-    padding: 0.5rem;
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
     text-align: left;
-    font-size: 0.95rem;
 }
 
-.table th {
-    background: #dfe6e9;
-    color: #2d3436;
+th {
+    background-color: #45a049;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
 }
