@@ -1,0 +1,110 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0e6f6; /* Roxo claro para o fundo */
+    color: #3e3146; /* Roxo escuro para o texto principal */
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #6a0572; /* Roxo vibrante para o título */
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f7eafc; /* Roxo bem claro para os itens da lista */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: #4a219e; /* Azul/Roxo para links */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block; 
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.error-message {
+    color: #e55a80; /* Rosa para mensagens de erro */
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #6a0572; /* Roxo vibrante para o botão */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #8c069b; /* Roxo um pouco mais escuro no hover */
+}
+
+.flash-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #3b5998; /* Azul para a mensagem de sucesso */
+    background-color: #d1e2ff; /* Azul claro para o fundo da mensagem de sucesso */
+    border-color: #b5c7e3;
+    text-align: center;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.form-group input[type="checkbox"] + label {
+    display: inline;
+    font-weight: normal;
+}
