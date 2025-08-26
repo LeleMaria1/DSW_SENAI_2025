@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Define que o documento é HTML5, o padrão pra páginas web -->
+        <meta charset="UTF-8"> <!-- Usa UTF-8 pra suportar acentos e caracteres especiais -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz o site se adaptar a telas de celular e tablet -->
+        <title>Detalhes da Receita - Receitinhas</title> <!-- Título da página com o nome do projeto -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Conecta o arquivo CSS -->
+    </head>
+    <body>
+        <header>
+            <!-- Cabeçalho com a barra de navegação -->
+            <nav>
+                <a href="{{ url_for('index') }}">Página Inicial</a> <!-- Link pra voltar pra página inicial -->
+                <a href="{{ url_for('nova_receita') }}">Nova Receita</a> <!-- Link pra criar uma nova receita -->
+            </nav>
+        </header>
+        <main class="main-content"> <!-- Classe pra ajudar com o espaçamento do rodapé fixo -->
+            <!-- Área principal com os detalhes da receita -->
+            <div class="detalhe-receita"> <!-- Div pra centralizar e estilizar a caixa de detalhes -->
+                <!-- Botão "X" pra voltar pra página inicial -->
+                <a href="{{ url_for('index') }}" class="detalhe-fechar">&times;</a>
+                <h2>{{ receita.nome | default('Sem nome') }}</h2> <!-- Mostra o nome da receita -->
+                <div class="card"> <!-- Caixa pros ingredientes -->
+                    <h3>Ingredientes</h3> <!-- Título da seção de ingredientes -->
+                    <ul class="ingredientes-lista"> <!-- Lista de ingredientes -->
+                        {% for ingrediente in receita.ingredientes %} <!-- Laço pra cada ingrediente -->
+                            {% if ingrediente %} <!-- Ignora ingredientes vazios -->
+                                <li>
+                                    <!-- Checkbox ao lado de cada ingrediente -->
+                                    <label><input type="checkbox"> {{ ingrediente | e }}</label>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="card"> <!-- Caixa pro modo de preparo -->
+                    <h3>Modo de Preparo</h3> <!-- Título da seção de modo de preparo -->
+                    <!-- Converte quebras de linha em <br> pra formatar o texto -->
+                    <p>{{ receita.modo_preparo | default('') | replace('\n', '<br>') | safe }}</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <!-- Rodapé que fica fixo no final da página -->
+            <p>&copy; 2025 Receitinhas. Todos os direitos reservados.</p> <!-- Texto do rodapé -->
+        </footer>
+    </body>
+</html>

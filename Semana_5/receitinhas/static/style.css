@@ -1,121 +1,208 @@
+/* Estilo geral do corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif; /* Usa uma fonte limpa e fácil de ler */
+    line-height: 1.6; /* Espaço entre linhas pra ficar mais legível */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+    background-color: #f4f4f4; /* Cor de fundo clara */
+    color: #333; /* Cor do texto escura */
+    min-height: 100vh; /* Faz o body ocupar pelo menos a altura total da tela */
+    padding-bottom: 60px; /* Espaço no final pra não sobrepor o rodapé fixo */
 }
 
+/* Estilo do cabeçalho */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    background: #333; /* Fundo escuro pro cabeçalho */
+    color: #fff; /* Texto branco pra contrastar */
+    padding: 1rem 0; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
 }
 
+/* Estilo dos links da navegação */
 header nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+    color: #fff; /* Links brancos */
+    text-decoration: none; /* Remove o sublinhado */
+    margin: 0 15px; /* Espaço entre os links */
+    font-weight: bold; /* Texto em negrito */
 }
 
+/* Conteúdo principal da página */
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 800px; /* Largura máxima pra não ficar muito largo */
+    margin: 20px auto; /* Centraliza e dá espaço nas bordas */
+    padding: 20px; /* Espaçamento interno */
 }
 
+/* Estilo dos cards (caixas brancas com sombra) */
 .card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    background: #fff; /* Fundo branco */
+    padding: 20px; /* Espaço interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px; /* Espaço abaixo do card */
 }
 
+/* Estilo dos títulos dentro dos cards */
 .card h3 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-    margin-top: 0;
+    border-bottom: 2px solid #333; /* Linha abaixo do título */
+    padding-bottom: 10px; /* Espaço abaixo da linha */
+    margin-top: 0; /* Remove margem superior */
 }
 
+/* Estilo dos grupos de formulário (campos com labels) */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Espaço abaixo de cada campo */
 }
 
+/* Estilo das labels dos formulários */
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    display: block; /* Faz a label ocupar a linha toda */
+    margin-bottom: 5px; /* Espaço abaixo da label */
+    font-weight: bold; /* Texto em negrito */
 }
 
+/* Estilo dos inputs e textareas */
 .form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px; /* Espaço interno */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
 }
 
+/* Estilo do botão de enviar formulário */
 button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+    display: block; /* Ocupa a linha toda */
+    width: 100%; /* Largura total */
+    padding: 15px; /* Espaço interno */
+    background-color: #28a745; /* Verde pro botão */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mãozinha ao passar o mouse */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Animação suave na cor */
 }
 
+/* Efeito ao passar o mouse no botão de enviar */
 button[type="submit"]:hover {
-    background-color: #218838;
+    background-color: #218838; /* Verde mais escuro */
 }
 
+/* Estilo das mensagens de alerta (flash) */
 .alert {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    font-weight: bold;
+    padding: 10px; /* Espaço interno */
+    margin-bottom: 15px; /* Espaço abaixo */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
 }
 
+/* Estilo pra mensagens de sucesso */
 .alert.success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+    background-color: #d4edda; /* Verde claro pra sucesso */
+    color: #155724; /* Texto verde escuro */
+    border: 1px solid #c3e6cb; /* Borda verde */
 }
 
+/* Estilo pra mensagens de erro */
 .alert.danger {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
+    background-color: #f8d7da; /* Vermelho claro pra erro */
+    color: #721c24; /* Texto vermelho escuro */
+    border: 1px solid #f5c6cb; /* Borda vermelha */
 }
 
+/* Estilo do botão de voltar/criar receita */
 .btn-voltar {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #6c757d;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    display: inline-block; /* Fica na linha, mas respeita padding */
+    padding: 10px 20px; /* Espaço interno */
+    background-color: #6c757d; /* Cinza pro botão */
+    color: white; /* Texto branco */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-top: 20px; /* Espaço acima */
+    transition: background-color 0.3s ease; /* Animação suave na cor */
 }
 
+/* Efeito ao passar o mouse no botão de voltar */
 .btn-voltar:hover {
-    background-color: #5a6268;
+    background-color: #5a6268; /* Cinza mais escuro */
 }
 
+/* Estilo da lista de receitas na página inicial */
+.receitas-lista {
+    display: flex; /* Usa flexbox pra organizar os itens */
+    flex-direction: column; /* Coloca os itens em coluna */
+    gap: 10px; /* Espaço entre os itens */
+    margin-top: 20px; /* Espaço acima da lista */
+}
+
+/* Estilo de cada item da lista de receitas */
+.receita-item {
+    display: block; /* Faz o link ocupar a linha toda */
+    padding: 15px; /* Espaço interno */
+    background-color: #007bff; /* Azul pros itens */
+    color: white; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado do link */
+    transition: background-color 0.3s ease; /* Animação suave na cor */
+}
+
+/* Efeito ao passar o mouse no item da receita */
+.receita-item:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+}
+
+/* Estilo da caixa de detalhes da receita */
+.detalhe-receita {
+    background-color: #fff; /* Fundo branco */
+    padding: 20px; /* Espaço interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra pra destacar */
+    position: relative; /* Permite posicionar o botão de fechar */
+    max-width: 600px; /* Largura máxima pra centralizar */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Estilo do botão de fechar (X) na página de detalhes */
+.detalhe-fechar {
+    position: absolute; /* Posiciona no canto superior direito */
+    top: 10px; /* Distância do topo */
+    right: 15px; /* Distância da direita */
+    font-size: 24px; /* Tamanho do X */
+    color: #333; /* Cor padrão do X */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+/* Efeito ao passar o mouse no botão de fechar */
+.detalhe-fechar:hover {
+    color: #ff0000; /* Fica vermelho pra destacar */
+}
+
+/* Estilo da lista de ingredientes na página de detalhes */
+.ingredientes-lista {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove padding padrão */
+}
+
+/* Estilo de cada item da lista de ingredientes */
+.ingredientes-lista li {
+    margin-bottom: 10px; /* Espaço abaixo de cada item */
+}
+
+/* Estilo dos checkboxes na lista de ingredientes */
+.ingredientes-lista input[type="checkbox"] {
+    margin-right: 10px; /* Espaço entre o checkbox e o texto */
+}
+
+/* Estilo do rodapé fixo */
 footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem 0; /* Espaço interno */
+    background: #333; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    position: fixed; /* Fixa o rodapé no final da tela */
+    bottom: 0; /* Alinha na parte inferior */
+    width: 100%; /* Ocupa toda a largura */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
 }

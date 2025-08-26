@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Receitinhas</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <!-- Define que o documento é HTML5, o padrão pra páginas web -->
+        <meta charset="UTF-8"> <!-- Usa UTF-8 pra suportar acentos e caracteres especiais -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz o site se adaptar a telas de celular e tablet -->
+        <title>Receitinhas</title> <!-- Título que aparece na aba do navegador -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Conecta o arquivo CSS pra estilizar a página -->
     </head>
     <body>
         <header>
+            <!-- Cabeçalho com a barra de navegação -->
             <nav>
-                <a href="{{ url_for('index') }}">Página Inicial</a>
-                <a href="{{ url_for('nova_receita') }}">Nova Receita</a>
+                <a href="{{ url_for('index') }}">Página Inicial</a> <!-- Link pra voltar pra página inicial -->
+                <a href="{{ url_for('nova_receita') }}">Nova Receita</a> <!-- Link pra criar uma nova receita -->
             </nav>
         </header>
-        <main>
-            <h1>Bem-vindo ao Receitinhas!</h1>
-            <p>Crie e compartilhe suas receitas favoritas!</p>
-            <a href="{{ url_for('nova_receita') }}" class="btn-voltar">Criar Receita</a>
+        <main class="main-content"> <!-- Classe pra ajudar com o espaçamento do rodapé fixo -->
+            <!-- Área principal onde fica o conteúdo da página -->
+            <h1>Bem-vindo ao Receitinhas!</h1> <!-- Título grande pra dar boas-vindas -->
+            <p>Crie e compartilhe suas receitas favoritas!</p> <!-- Texto introdutório -->
+            <a href="{{ url_for('nova_receita') }}" class="btn-voltar">Criar Receita</a> <!-- Botão que leva pro formulário de nova receita -->
+            
+            <!-- Seção pra mostrar todas as receitas que foram cadastradas -->
+            <h2>Receitas Cadastradas</h2> <!-- Título da lista de receitas -->
+            {% if receitas %} <!-- Verifica se tem alguma receita na lista -->
+                <div class="receitas-lista"> <!-- Div que organiza a lista de receitas -->
+                    {% for receita in receitas %} <!-- Laço Jinja2 pra mostrar cada receita -->
+                        <!-- Cada receita é um link que leva pra página de detalhes -->
+                        <a href="{{ url_for('receita_detalhe', index=loop.index0) }}" class="receita-item">
+                            {{ receita.nome }} <!-- Mostra o nome da receita -->
+                        </a>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>Nenhuma receita cadastrada ainda.</p> <!-- Mostra isso se a lista estiver vazia -->
+            {% endif %}
         </main>
         <footer>
-            <p>&copy; 2025 Receitinhas. Todos os direitos reservados.</p>
+            <!-- Rodapé que fica fixo no final da página -->
+            <p>&copy; 2025 Receitinhas. Todos os direitos reservados.</p> <!-- Texto do rodapé -->
         </footer>
     </body>
 </html>
